@@ -47,6 +47,7 @@ describe('Automation Exercise', () => {
             .should('be.visible')
             .and('contain.text', 'Account Deleted!');
         cy.get('[data-qa="continue-button"]').click();
+        cy.get('a[href="/login"]').should('be.visible');
     });
 
     it('Test Case 2: Fazer login com o usuário cadastrado e excluir a conta', () => {
